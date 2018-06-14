@@ -944,6 +944,18 @@ btn:hover{
 .row1 {
 	color: #FFFFFF;
 	background-color: rgba(0, 0, 0, .2);
+	transition: ease-in-out;
+	margin-top: 0;
+}
+
+.headerHidden {
+	position: fixed;
+	top: -150px;
+	transition: top .3s ease;
+}
+.headerActive {
+	top: 0;
+	transition: top .3s ease;
 }
 
 .row2 {

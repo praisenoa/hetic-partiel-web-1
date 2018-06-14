@@ -16,3 +16,23 @@ function toggleBurgerMenu(){
     displayMenu = false;
   }
 }
+
+// Scroll Navigation
+
+var header = document.querySelector('.header');
+var scrollCount = 150;
+document.addEventListener('scroll', function(event) {
+  if (document.body.scrollTop > 150) {
+    header.classList.add("headerHidden");
+    if (document.body.scrollTop > scrollCount) {
+      scrollCount = document.body.scrollTop;
+      header.classList.remove("headerActive");
+    } else {
+      header.classList.add("headerActive");
+      scrollCount = document.body.scrollTop;
+    }
+
+  } else  {
+    header.classList.remove("headerHidden");
+  }
+});
