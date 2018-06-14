@@ -35,6 +35,10 @@
 	line-height: normal;
 }
 
+#burgermenu #topbar {
+	display: none;
+	font-size: 25px;
+}
 
 /* Header --------------------------------------------------------------------------------------------------------------- */
 
@@ -1211,6 +1215,10 @@ table a,
 	}
 }
 
+#burgermenu {
+	display: none;
+}
+
 
 /* Mobile Devices --------------------------------------------------------------------------------------------------------------- */
 
@@ -1218,20 +1226,53 @@ table a,
 	.hoc {
 		max-width: 90%;
 	}
+
+	.fl_right, .fl_left {
+		display: block;
+		float: none;
+	}
+
 	#topbar {}
 	#header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		text-align: center;
+		padding: 30px 0;
 	}
-	
+
+	#topbar #burgermenu {
+		display: inline-block;
+	}
+
 	#header #logo {
-		margin: 30px 0 0 0;
+		margin: 3px;
 	}
-	#mainav {}
-	#mainav ul {
+	#mainav li {
+		display: block;
+		position: relative;
+		padding: 0;
+		margin: 0;
+	}
+
+	#mainav {
 		display: none;
 	}
+
+	#mainav .drop::after, #mainav li li .drop::after{
+		left: inherit;
+		margin-left: 8px;
+	}
+
+#mainav ul {
+	display: none;
+}
+
+	#mainav ul ul {
+		z-index: inherit;
+		position: relative;
+		visibility: visible;
+		opacity: inherit;
+		width: 1;
+	}
+
 	#mainav form {
 		display: block;
 	}
