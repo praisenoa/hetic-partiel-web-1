@@ -36,3 +36,21 @@ document.addEventListener('scroll', function(event) {
     header.classList.remove("headerHidden");
   }
 });
+
+// Bouton back to top
+
+var btt {
+  backToTop : document.getElementById("backtotop")
+}
+
+document.addEventListener('scroll', function(){
+  if (window.pageYOffset > 200 ){
+    btt.backToTop.classList.add('visible');
+  }else{
+    btt.backToTop.classList.remove('visible');
+  }
+ });
+
+ btt.backToTop.addEventListener('click', function(){
+   document.documentElement.scrollTop = document.body.scrollTop = 0;
+ });
