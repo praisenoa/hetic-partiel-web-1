@@ -922,6 +922,13 @@ textarea:focus,
 	color: #FFFFFF;
 }
 
+a:hover{
+	transition: all .3s ease;
+}
+
+btn:hover{
+	transition: all .3s ease;
+}
 
 /* Rows */
 
@@ -1213,10 +1220,13 @@ table a,
 	}
 	#topbar {}
 	#header {
-		padding: 30px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
+	
 	#header #logo {
-		margin-top: 3px;
+		margin: 30px 0 0 0;
 	}
 	#mainav {}
 	#mainav ul {
@@ -1327,4 +1337,3 @@ table a,
 		font-size: 1.6rem;
 	}
 }
-
